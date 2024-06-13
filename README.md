@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/867e33cf9b43220be8f5/maintainability)](https://codeclimate.com/github/amalv/movie-search/maintainability)
+
 # Movie Search 🎬
 
 This is a showcase project for testing several code quality integrations. It's a simple movie search application built with React and TypeScript, using the [The Movie Database (TMDb) API](https://developers.themoviedb.org/3/getting-started/introduction) for movie search.
