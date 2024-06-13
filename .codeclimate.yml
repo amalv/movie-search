@@ -1,0 +1,13 @@
+version: "2"
+checks:
+  method-lines:
+    config:
+      threshold: 50
+plugins:
+  duplication:
+    exclude_patterns:
+      - "**/*.test.ts"
+      - "**/*.test.tsx"
+coverage:
+  exclude_patterns:
+    - "**/index.ts"
