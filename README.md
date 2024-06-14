@@ -1,4 +1,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/867e33cf9b43220be8f5/maintainability)](https://codeclimate.com/github/amalv/movie-search/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/867e33cf9b43220be8f5/test_coverage)](https://codeclimate.com/github/amalv/movie-search/test_coverage)
 
 # Movie Search 🎬
 
