@@ -33,7 +33,7 @@ describe("useSearchMovies hook", () => {
 
 	it("fetches and updates movies when searchMovies is called", async () => {
 		(global.fetch as jest.Mock).mockResolvedValueOnce({
-			json: async () => ({ results: mockMovies }),
+			json: () => Promise.resolve({ results: mockMovies }),
 		});
 
 		const { result } = renderHook(() => useSearchMovies());
@@ -48,7 +48,7 @@ describe("useSearchMovies hook", () => {
 	it("handles fetch errors correctly", async () => {
 		const consoleErrorSpy = vi
 			.spyOn(console, "error")
-			.mockImplementation(() => {});
+			.mockImplementation(vi.fn());
 		(global.fetch as jest.Mock).mockRejectedValueOnce(new Error("Fetch error"));
 
 		const { result } = renderHook(() => useSearchMovies());

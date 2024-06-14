@@ -11,6 +11,10 @@ export const SearchMovies = () => {
 		searchMovies(query);
 	};
 
+	const handleQueryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setQuery(e.target.value);
+	};
+
 	return (
 		<>
 			<form className="form" onSubmit={onSubmit}>
@@ -24,7 +28,7 @@ export const SearchMovies = () => {
 					id="query"
 					placeholder="i.e. Jurassic Park"
 					value={query}
-					onChange={(e) => setQuery(e.target.value)}
+					onChange={handleQueryChange}
 				/>
 				<button className="button" type="submit">
 					Search
