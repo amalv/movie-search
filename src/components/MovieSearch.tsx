@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { MovieCard } from "./MovieCard";
 import { useSearchMovies } from "./useSearchMovies";
 
@@ -6,14 +6,20 @@ export const SearchMovies = () => {
 	const [query, setQuery] = useState("");
 	const { movies, searchMovies } = useSearchMovies();
 
-	const onSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
-		searchMovies(query);
-	};
+	const onSubmit = useCallback(
+		(e: React.FormEvent) => {
+			e.preventDefault();
+			searchMovies(query);
+		},
+		[query, searchMovies],
+	);
 
-	const handleQueryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setQuery(e.target.value);
-	};
+	const handleQueryChange = useCallback(
+		(e: React.ChangeEvent<HTMLInputElement>) => {
+			setQuery(e.target.value);
+		},
+		[],
+	);
 
 	return (
 		<>
