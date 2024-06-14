@@ -11,6 +11,7 @@ export default defineConfig({
 		exclude: [...configDefaults.exclude, "**/tests/**", "**/tests-examples/**"],
 		setupFiles: "./tests.setup.ts",
 		coverage: {
+			reporter: ["cobertura", "text"],
 			exclude: [
 				"**/.eslintrc.cjs",
 				"**/main.tsx",

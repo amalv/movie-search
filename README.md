@@ -1,5 +1,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/867e33cf9b43220be8f5/maintainability)](https://codeclimate.com/github/amalv/movie-search/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/867e33cf9b43220be8f5/test_coverage)](https://codeclimate.com/github/amalv/movie-search/test_coverage)
+[![DeepSource](https://app.deepsource.com/gh/amalv/movie-search.svg/?label=active+issues&show_trend=true&token=zYUGmVLayrFstB5qYv3RyvKo)](https://app.deepsource.com/gh/amalv/movie-search/)
 
 # Movie Search 🎬
 

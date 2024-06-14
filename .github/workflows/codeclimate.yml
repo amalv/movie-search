@@ -22,6 +22,6 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-          coverageCommand: "bun run coverage"
+          coverageCommand: "bun run coverage:clover"
           coverageLocations: |
             ${{github.workspace}}/coverage/clover.xml:clover

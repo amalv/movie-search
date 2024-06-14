@@ -1,0 +1,30 @@
+name: Deep Source
+
+on: push
+jobs:
+  deepsource:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - name: Install Dependencies
+        run: bun install
+      - name: Run coverage 
+        run: bun run coverage 
+      - name: Test & publish code coverage
+        uses: deepsourcelabs/test-coverage-action@master
+        env:
+          DS_SECRET: ${{ secrets.DEEPSOURCE_DSN }}
+        with:
+          key: javascript 
+          coverage-file: |
+            ${{github.workspace}}/coverage/cobertura-coverage.xml
+          dsn: ${{ secrets.DEEPSOURCE_DSN }}
