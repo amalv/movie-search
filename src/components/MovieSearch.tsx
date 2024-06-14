@@ -21,6 +21,7 @@ export const SearchMovies = () => {
 					className="input"
 					type="text"
 					name="query"
+					id="query"
 					placeholder="i.e. Jurassic Park"
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
@@ -33,7 +34,7 @@ export const SearchMovies = () => {
 				{movies
 					.filter((movie) => movie.poster_path)
 					.map((movie) => (
-						<MovieCard key={movie.id} movie={movie} /> // Use MovieCard component
+						<MovieCard key={movie.id} movie={movie} />
 					))}
 			</div>
 		</>
